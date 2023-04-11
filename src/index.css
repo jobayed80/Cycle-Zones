@@ -63,6 +63,7 @@
 {
   --yellow: #F5C32C;
     --orange : #FCA61F;
+    --green: #38d39f;
     --black : #242D49;
     --red : #C21E56;
     --gray : #788097;
@@ -71,6 +72,23 @@
     --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
     --orangeCard: rgba(252, 166, 31, 0.45);
     --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
+
+input{
+ outline: none;
+}
+
+.inputStyle {
+  width: 3rem !important;
+  height: 3rem;
+
+  font-size: 2rem;
+  border-radius: 4px;
+  border: 1px solid #38d39f;
+}
+
+.social-login-hover:hover{
+  background: red;
 }
 
 
@@ -107,7 +125,7 @@
     @apply h-[48px];
   }
   .input {
-    @apply bg-secondary text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1 focus:outline-pink-600;
+    @apply bg-white text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1 focus:outline-pink-600;
   }
   .textarea {
     @apply bg-secondary resize-none w-full outline-none p-6 rounded-sm h-[200px] focus:outline focus:outline-1 focus:outline-pink-600;

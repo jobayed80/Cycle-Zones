@@ -20,6 +20,8 @@ import UpworkBrandIcon from './assets/img/brands/upwork.png';
 import FiverBrandIcon from './assets/img/brands/fiverr.png';
 import BehanceBrandIcon from './assets/img/brands/behance.png';
 import DribbbleBrandIcon from './assets/img/brands/dribbble.png';
+import { FcGoogle } from 'react-icons/fc'
+import { FcPhone } from 'react-icons/fc'
 
 // projects images
 import Project1 from './assets/img/projects/blood.PNG';
@@ -74,6 +76,12 @@ export const navigation = [
     href: 'contact',
   },
 ];
+
+//Login Social media
+export const login_social = [
+  {icon: <FcGoogle></FcGoogle>},
+  {icon: <FcPhone></FcPhone>}
+]
 
 // social
 export const social = [

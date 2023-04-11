@@ -14,7 +14,7 @@ const Nav = () => {
                 return(
                     <li  className='text-white hover:text-pink-600 cursor-pointer text-lg' key={index}>
                         <Link to={item.href} activeClass='active' spy={true} smooth={true}
-                        duration={500} className='transition-all duration-500'>{item.name}</Link>
+                        duration={500} className='transition-all duration-500 '>{item.name}</Link>
                     </li>
                 )   
             })}
