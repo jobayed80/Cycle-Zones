@@ -77,6 +77,54 @@ export const navigation = [
   },
 ];
 
+
+
+// navigation
+export const homeNav = [
+  {
+    name: 'Home',
+    href: '/',
+  },
+  {
+    name: 'Blog',
+    href: 'blog',
+  },
+  {
+    name: 'Contact Us',
+    href: 'contact',
+  },
+  {
+    name: 'Join',
+    href: '/signin',
+  },
+ 
+];
+
+// navigation
+export const dashMenu = [
+  {
+    name: 'Rides',
+    href: '/',
+  },
+  {
+    name: 'History',
+    href: '/',
+  },
+  {
+    name: 'Notification',
+    href: '/notification',
+  },
+  {
+    name: 'Profile',
+    href: '/signin',
+  },
+ 
+];
+
+
+
+
+
 //Login Social media
 export const login_social = [
   {icon: <FcGoogle></FcGoogle>},
@@ -84,24 +132,30 @@ export const login_social = [
 ]
 
 // social
+
+// social
 export const social = [
   
   {
     icon: <FiLinkedin />,
     href: 'https://www.linkedin.com/in/md-jobayed-hossain-rabbi-aa4072200/',
+    name: 'LinkedIn'
   },
   {
     icon: <FiGithub />,
     href: 'https://github.com/jobayed80',
+    name: 'GitHub'
   },
 
   {
     icon: <FiFacebook />,
     href: 'https://www.facebook.com/Jobayed.102/',
+    name: 'Facebook'
   },
   {
     icon: <FiInstagram />,
     href: 'https://www.instagram.com/jobayed_hossain_rabbi/',
+    name: 'Instagram'
   },
 ];
 

@@ -4,6 +4,7 @@
 
 
 
+
 .borderCss{
   box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1), 0 8px 10px -6px var(--red);
   cursor: pointer;
@@ -50,34 +51,10 @@
 }
 
 
-/* *{
-  outline: 0;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-  
-} */
-
-
-:root
-{
-  --yellow: #F5C32C;
-    --orange : #FCA61F;
-    --green: #38d39f;
-    --black : #242D49;
-    --red : #C21E56;
-    --gray : #788097;
-    --blueCard : #DDF8FE;
-    --purple: rgb(238 210 255);
-    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
-    --orangeCard: rgba(252, 166, 31, 0.45);
-    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
-}
-
 input{
- outline: none;
+  border: none;
+  outline: none;
 }
-
 .inputStyle {
   width: 3rem !important;
   height: 3rem;
@@ -91,6 +68,20 @@ input{
   background: red;
 }
 
+:root
+{
+  --yellow: #F5C32C;
+    --orange : #FCA61F;
+    --green:  #38D39F;
+    --black : #242D49;
+    --red : #C21E56;
+    --gray : #788097;
+    --blueCard : #DDF8FE;
+    --purple: rgb(238 210 255);
+    --boxShadow : 0px 19px 60px rgb(0 0 0 / 8%);
+    --orangeCard: rgba(252, 166, 31, 0.45);
+    --smboxShadow: -79px 51px 60px rgba(0, 0, 0, 0.08);
+}
 
 
 
@@ -125,7 +116,7 @@ input{
     @apply h-[48px];
   }
   .input {
-    @apply bg-white text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1 focus:outline-pink-600;
+    @apply  text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-sm focus:outline focus:outline-1 focus:outline-pink-600;
   }
   .textarea {
     @apply bg-secondary resize-none w-full outline-none p-6 rounded-sm h-[200px] focus:outline focus:outline-1 focus:outline-pink-600;
@@ -133,4 +124,38 @@ input{
   .active {
     @apply text-pink-600;
   }
+}
+
+
+
+
+
+/* For dashboard design */
+.app,
+.content {
+  height: 100%;
+  width: 100%;
+
+}
+.app{
+  position: relative;
+  display: flex;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #e0e0e0;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

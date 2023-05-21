@@ -91,36 +91,7 @@ const OtpVerification = () => {
 
 
 
-   let onSubmitOTP = (e) => {
-    e.preventDefault()
-    console.log(otp + "OTP paichi")
-    if(!otp){
-        setOtpEmptyErr("please enter your verification code")
-        
-    }
-    else{
-        window.confirmationResult.confirm(otp).then((result) => {
-            // User signed in successfully.
-    
-            const user = result.user;
-            console.log(user)
-            // console.log(JSON.stringify(user))
-            alert("User is verified")
-            navigate('/home')
-    
-    
-    
-            // ...
-        }).catch((error) => {
-            // User couldn't sign in (bad verification code?)
-            // ...
-            console.log(error)
-        });
-    
-    }
-    
-
-}
+  
 
 
 
@@ -153,6 +124,44 @@ const OtpVerification = () => {
 
 
 
+let onSubmitOTP = (e) => {
+    e.preventDefault()
+    console.log(otp + "OTP paichi")
+    if(!otp){
+        setOtpEmptyErr("please enter your verification code")
+        
+    }
+    else{
+        window.confirmationResult.confirm(otp).then((result) => {
+            // User signed in successfully.
+    
+            const user = result.user;
+            console.log(user)
+            // console.log(JSON.stringify(user))
+            // alert("User is verified")
+            navigate('/dash')
+    
+            // ...
+        }).catch((error) => {
+            // User couldn't sign in (bad verification code?)
+            // ...
+            console.log(error)
+        });
+    
+    }
+    
+
+}
+
+
+
+
+
+
+
+
+
+
 
    // ------- This part for Resend OTP Code Start--------
    let configureCaptcha = () => {
@@ -171,6 +180,8 @@ const OtpVerification = () => {
         }
     }, auth);
 }
+
+
 
    let [timeleft, setTimeleft] = useState(2 * 60)
    let [isCounting, setIsCounting] = useState(true)

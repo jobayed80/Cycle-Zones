@@ -40,26 +40,26 @@ const Contact = () => {
     return (
         <section id='contact' className='section bg-primary relative'>
 
-            
-<div
-            className="blur"
-            style={{
-              background: "#C1F5FF",
-              top: "15rem",
-              width: "212rem",
-              height: "12rem",
-              right: "110rem",
-            }}
-          >
 
-          </div>
+            <div
+                className="blur"
+                style={{
+                    background: "#C1F5FF",
+                    top: "15rem",
+                    width: "212rem",
+                    height: "12rem",
+                    right: "110rem",
+                }}
+            >
 
-          
+            </div>
+
+
             <div className="container mx-auto">
 
                 <div className="container mx-auto" data-aos="fade-up" data-aos-duration="2000">
                     <div className="flex flex-col items-center text-center">
-                        <h2 style={{color:"var(--red"}} className='section-title  before:content-contact relative before:absolute before:opacity-40 before:-top-[2rem] before:-left-3/4 before:hidden before:lg:block'>
+                        <h2 style={{ color: "var(--red" }} className='section-title  before:content-contact relative before:absolute before:opacity-40 before:-top-[2rem] before:-left-3/4 before:hidden before:lg:block'>
                             Contact me
                         </h2>
                         <p className='subtitle text-justify'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ab porro exercitationem totam quisquam nulla dignissimos asperiores labore, inventore, perferendis at placeat eaque voluptate, neque distinctio suscipit accusamus repellat aut!  </p>
@@ -77,7 +77,7 @@ const Contact = () => {
                                 const { icon, title, subtitle, description } = item
                                 return (
                                     <div className="flex flex-col lg:flex-row gap-x-4" key={index}>
-                                        <div style={{color:"var(--red"}} className="text-accent rounded-md w-14 h-14 flex items-center justify-center mt-2 mb-4 lg:mb-0 text-2xl">
+                                        <div style={{ color: "var(--red" }} className="text-accent rounded-md w-14 h-14 flex items-center justify-center mt-2 mb-4 lg:mb-0 text-2xl">
                                             {icon}
                                         </div>
                                         <h4 className='font-body text-xl mb-1'>{title}</h4>
@@ -94,18 +94,20 @@ const Contact = () => {
                         {/* notice error */}
 
                         {
-                           
+
                         }
 
 
                         <div className="flex gap-8">
-                           
+
                             <input onChange={(e) => setName(e.target.value)} className='input' type="text" placeholder='Your Full Name' />
                             <input onChange={(e) => setEmail(e.target.value)} className='input' type="email" placeholder='Your Email' />
                         </div>
+
+
                         <input onChange={(e) => setSubject(e.target.value)} className='input' type="text" placeholder='Subject' />
                         <textarea onChange={(e) => setMessage(e.target.value)} className='textarea' placeholder='your message'></textarea>
-                        <button style={{background:"var(--red"}} onClick={handleSendMessage} className='btn btn-lg  hover:bg-accent-hover'>Send Message</button>
+                        <button style={{ background: "var(--red" }} onClick={handleSendMessage} className='btn btn-lg  hover:bg-accent-hover'>Send Message</button>
                     </div>
 
 

@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Header from '../../components/Header';
+import HeaderNav from '../../components/HeaderNav';
 import image from '../../assets/img/login.svg'
 import logo from '../../assets/img/cycle.gif'
+import dashboard from '../DashMenu/dashboard';
 import { Link, useNavigate } from "react-router-dom";
 
 import { FcGoogle } from 'react-icons/fc'
@@ -31,7 +33,7 @@ const SignIn = () => {
 
     const auth = getAuth();
     const provider = new GoogleAuthProvider();
-    const navigate = useNavigate
+    const navigate = useNavigate()
 
     let [email, setEmail] = useState("")
     let [emailErr, setEmailErr] = useState("")
@@ -91,8 +93,8 @@ const SignIn = () => {
           //   icon: 'success',
           //   title: 'Signed in successfully'
           // })
-
-          navigate("/loading")
+          
+          navigate("/dashboard")
 
 
 
@@ -135,15 +137,15 @@ const SignIn = () => {
 
 
     return (
-        <>
+        <div>
 
-           <Header></Header>
-            <section className='section bg-white min-h-[900px] relative'>
+            <HeaderNav></HeaderNav>
+            <section id='' className='section bg-white min-h-[900px] relative'>
 
                 {/* data-aos="fade-up" data-aos-duration="2000" */}
                 <div className="container mx-auto">
 
-                    <div className="flex flex-col xl:flex-row gap-24 xl:mt-36 sm:mt-24 md:mt-24 ">
+                    <div className="flex flex-col xl:flex-row gap-24 xl:mt-36 sm:mt-24 md:mt-24 items-center">
 
 
 
@@ -151,8 +153,27 @@ const SignIn = () => {
 
 
                         <img className=' object-cover h-[450px] w-[666px] md:mx-auto lg:mx-0 sm:mx-auto xl:mt-4 rounded-2xl m-11' src={image} alt="" />
+                        {/* <div className='w-[100px] h-[20px] className="cursor-pointer m-4 items-center justify-center rounded-full p-2 transition duration-500 ease-in-out bg-teal-500 hover:bg-teal-200"'>
+                            <p><FcGoogle></FcGoogle> </p>
+                            <p>Sign in With Google</p>
+                        </div> */}
+                        <nav>
+                                <div onClick={handleGoogle} className='flex space-x-1 capitalize text-[20px]  w-full   items-center border-2 p-2 rounded-2xl cursor-pointer'>
+                                   
+                                        
+                                            <p className="cursor-pointer items-center justify-center rounded-full  transition duration-500 ease-in-out">
+                                                <FcGoogle></FcGoogle> 
+                                            </p>
+                                            <p>Sign in With Google</p>
+                                            
 
-                        <div className="flex flex-col items-center text-center lg-items-start lg:text-left ">
+                                            
+                                       
+                                   
+                                </div>
+                            </nav>
+
+                        {/* <div className="flex flex-col items-center text-center lg-items-start lg:text-left ">
 
                             <div className="flex flex-col" >
                                 <img className='object-cover h-[150px] w-[160px] md:mx-auto lg:mx-auto sm:mx-auto flex items-center' src={logo} alt="" />
@@ -214,9 +235,9 @@ const SignIn = () => {
                         before:lg:block'>
                                     <small className='text-black '>Sign'In' to</small> DIU,Cycle Zone
                                 </h2>
-                                {/* <p  className='mb-4 text-accent'>Web Designing</p> */}
+                               
                                 <hr className='mb-8 opacity-5' />
-                                {/* <input onChange={(e) => setName(e.target.value)} className='input' type="text" placeholder='Your Full Name' /> */}
+                               
                                 <input className='input mb-4 active' type="email" placeholder='Your Email' onChange={(e) => { setEmail(e.target.value) }} />
                                 <input className='input' type="pass" placeholder='Your Password' onChange={(e) => { setEmail(e.target.value) }} />
                                 <hr className='mt-2'></hr>
@@ -226,7 +247,7 @@ const SignIn = () => {
                                 </div>
                             </div>
 
-                            <button onClick={handleLogin} style={{ background: 'var(--green' }} className='btn btn-md bg-accent hover:bg-accent-hover transition-all w-full rounded-lg text-xl mt-10 '>SignIn</button>
+                            <button onClick={handleLogin} style={{ background: 'var(--green)' }} className='btn btn-md bg-accent hover:bg-accent-hover transition-all w-full rounded-lg text-xl mt-10 '>SignIn</button>
                             <div className="login-bootom-part">
                                 <p className='mt-2 mb-2 text-center'> <small className='text-black'>Not a member yet?</small> <a href=""> Create an account</a></p>
                                 <p className='text-center'>-or-</p>
@@ -246,12 +267,12 @@ const SignIn = () => {
                                 </ul>
                             </nav>
 
-                        </div>
+                        </div> */}
                     </div>
 
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 
